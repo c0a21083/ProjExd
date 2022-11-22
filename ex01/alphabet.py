@@ -12,6 +12,7 @@ if __name__ == "__main__":
     alpha = ["A","B","C","D","E","F","G","H","I","J",\
         "K","L","M","N","O","P","Q","R","S","T",\
         "U","V","W","X","Y","Z"]
+    
 
     while ans == 0:
         while size>0:
@@ -51,3 +52,5 @@ if __name__ == "__main__":
             ans = 0;
         count += 1;
     print(str(count) + "回で終了しました。");
+    
+    
