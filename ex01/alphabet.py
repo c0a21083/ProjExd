@@ -26,7 +26,7 @@ if __name__ == "__main__":
                 size = 1;
         in_list = random.sample(alpha,in_st);
         out_list = random.sample(in_list,out_st);
-        print("対象文字:");
+        print("対象文字: ");
         for i in range(in_st):
             print(in_list[i] + " ",end="")
         print("\n")
