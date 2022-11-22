@@ -14,6 +14,7 @@ if __name__ == "__main__":
         "U","V","W","X","Y","Z"]
     
     
+    
 
     while ans == 0:
         while size>0:
