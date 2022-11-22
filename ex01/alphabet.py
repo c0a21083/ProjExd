@@ -15,6 +15,7 @@ if __name__ == "__main__":
     
     
     
+    
 
     while ans == 0:
         while size>0:
