@@ -33,11 +33,6 @@ def button_click(event):
         if siki == "18782+18782":
             tkm.showwarning("警告", "恐ろしい人間ですね");
         
-        #クリスマス（未完成）
-        #elif siki == "1224+1225" or "1225+1224":
-            #tkm.showinfo("ハッピー！","Merry Christmas!");
-            #entry.delete(0, tk.END);
-            #entry.insert(tk.END, "Merry Christmas!");
         
         #階乗の計算（未完成のため、1けたのみ可能）
         leng = len(siki);
