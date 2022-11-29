@@ -20,7 +20,10 @@ def button_click(event):
     #tkm.showinfo("押しましたね", f"{num}のボタンが押されました");
     
     if num == "=":
-        pass
+        siki = entry.get();
+        ans = eval(siki);
+        entry.delete(0, tk.END);
+        entry.insert(tk.END, ans);
     else:
         entry.insert(tk.END, num)
 
@@ -40,6 +43,7 @@ operators = ["+", "="];
 
 for ope in operators:
     button = tk.Button(root, text = f"{ope}", width=4, height=2, font = ("", 30));
+    button.bind("<1>", button_click);
     button.grid(row=x, column=y)
     y += 1;
     if y%3==0:
