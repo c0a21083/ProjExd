@@ -20,8 +20,7 @@ entry.grid(row=0, column=0, columnspan=5);
 def button_click(event):
     btn = event.widget;
     num = btn["text"];
-    #entry.insert(tk.END, num);
-    #tkm.showinfo("押しましたね", f"{num}のボタンが押されました");
+    
     
     if num == "=":
         siki = entry.get();
