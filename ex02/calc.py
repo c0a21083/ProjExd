@@ -10,8 +10,15 @@ root = tk.Tk()
 root.title("電卓");
 root.geometry("300x500");
 
+def button_click(event):
+    btn = event.widget;
+    num = btn["text"];
+    tkm.showinfo("押しましたね", f"{num}のボタンが押されました");
+    
+
 for i in range(9, -1, -1):
-    button = tk.Button(root, font = ("", 30), text=i, width=4, height=2);
+    button = tk.Button(root, font = ("", 30), text=f"{i}", width=4, height=2);
+    button.bind("<1>", button_click);
     button.grid(row = x,column = y);
     y += 1;
     
@@ -21,6 +28,15 @@ for i in range(9, -1, -1):
         
     
     
+operators = ["+", "="];
+
+for ope in operators:
+    button = tk.Button(root, text = f"{ope}", width=4, height=2, font = ("", 30));
+    button.grid(row=x, column=y)
+    y += 1;
+    if y%3==0:
+        x += 1;
+        y=0;
 
 root.mainloop();
     
