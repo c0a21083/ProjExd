@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-import tkinter as tk
-import maze_maker as mm
-
-def key_down(event):
-    global key
-    key = event.keysym
-=======
 import tkinter as tk;
 import maze_maker as mm;
 import tkinter.messagebox as me;
 import random;
 
+def key_down(event):
+    global key
+    key = event.keysym
 #ボタン押下中
 def key_down(event):
     global key
@@ -19,12 +14,11 @@ def key_down(event):
     rany = random.randint(0,9);
     
 #ボタン非接触時
->>>>>>> ex
 def key_up(event):
     global key
     key = ""
 
-<<<<<<< HEAD
+
 
 def main_proc():
     global mx, my;
@@ -67,7 +61,7 @@ if __name__ == "__main__":
     root.bind("<KeyPress>", key_down)
     root.bind("<KeyRelease>", key_up)
     main_proc()
-=======
+    
 #キャラ移動
 def main_proc():
     global mx, my;
@@ -138,8 +132,10 @@ if __name__ == "__main__":
     #迷路用リスト作成
     maze_lst = mm.make_maze(15, 9)
     mm.show_maze(canvas, maze_lst)
+    
     #マスの座標
     mx, my = 1, 1;
+    
     #キャラの座標
     cx, cy = mx*100+50, my*100+50;
     gx, gy = 0, 0
@@ -147,6 +143,7 @@ if __name__ == "__main__":
     #gx, gy = ranx*100+50, rany*100+50;
     enemy_move()
     canvas.create_image(gx, gy, image = enemy, tag = "ene");
+    
     #登場キャラ、スタートゴールの画像
     tori = tk.PhotoImage(file="../fig/8.png")
     start = tk.PhotoImage(file = "./start.png");
@@ -159,11 +156,12 @@ if __name__ == "__main__":
     canvas.create_image(1200, 750, image = goal, tag = "gol");
     canvas.create_image(gx, gy, image = enemy, tag = "ene");
     key = ""
+    
     #イベント設定
     root.bind("<KeyPress>", key_down)
     root.bind("<KeyRelease>", key_up)
     main_proc()
     enemy_move()
     
->>>>>>> ex
+
     root.mainloop()
