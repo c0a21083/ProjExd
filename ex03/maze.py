@@ -29,15 +29,23 @@ def key_up(event):
 def main_proc():
     global mx, my;
     global cx, cy;
-    if key == "Up": my -= 1
-    if key == "Down": my += 1
-    if key == "Left": mx -= 1
-    if key == "Right": mx += 1
+    if key == "Up": 
+        my -= 1
+    if key == "Down": 
+        my += 1
+    if key == "Left": 
+        mx -= 1
+    if key == "Right": 
+        mx += 1
     if maze_lst[mx][my] == 1:
-        if key == "Up": my += 1
-        if key == "Down": my -= 1
-        if key == "Left": mx += 1
-        if key == "Right": mx -= 1
+        if key == "Up": 
+            my += 1
+        if key == "Down": 
+            my -= 1
+        if key == "Left": 
+            mx += 1
+        if key == "Right": 
+            mx -= 1
     cx, cy = mx*100+50, my*100+50;
     canvas.coords("kokaton", cx, cy)
     root.after(100, main_proc)
@@ -95,6 +103,7 @@ def main_proc():
             mx -= 1
             count += 1
     cx, cy = mx*100+50, my*100+50;
+    
     canvas.coords("kokaton", cx, cy)
     if cx==gx and cy==gy:
         me.showinfo("dead","GameOver")
