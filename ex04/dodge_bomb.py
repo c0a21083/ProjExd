@@ -116,6 +116,7 @@ def main():
         scrn_sfc.blit(kama_sfc, kama_rct);
         scrn_sfc.blit(item_sfc, item_rct);
         
+        #障害物系の反射
         bomb_rct.move_ip(vx, vy);
         item_rct.move_ip(vx, vy);
         yoko, tate = check_bound(bomb_rct, scrn_rct);
