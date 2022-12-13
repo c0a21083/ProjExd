@@ -68,7 +68,7 @@ def main():
     pg.display.update();
     
     
-    
+    #爆弾とラーメンの移動方向
     vx, vy = +1, +1;
     ix, iy = +1, +1;
     #Q2
