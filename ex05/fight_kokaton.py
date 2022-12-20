@@ -142,9 +142,12 @@ def main():
 
         kkt.update(scr)
         bkd.update(scr)
+        #当たり判定、爆弾との衝突判定
         if kkt.rct.colliderect(bkd.rct):
+            #死亡音
             dead_sound.play();
-            time.sleep(5000);
+            time.sleep(100);
+            #GameOver音
             lose_sound.play();
             return
 
